@@ -10,8 +10,8 @@ public class Receita {
     private Categoria categoria;
     private double tempoPreparo;
     private Rendimento rendimento;
-    private List<Ingrediente> ingredientes;
-    private List<String> preparo;
+    private List<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
+    private List<String> preparo = new ArrayList<String>();
 
     public Receita(String nome, Categoria categoria) {
         this.nome = nome;
@@ -51,20 +51,28 @@ public class Receita {
         return preparo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-
     public void setTempoPreparo(double tempoPreparo) {
         this.tempoPreparo = tempoPreparo;
     }
 
     public void setRendimento(Rendimento rendimento) {
         this.rendimento = rendimento;
+    }
+
+    public void setIngrediente(Ingrediente ingrediente) {
+        this.ingredientes.add(ingrediente);
+    }
+
+    public void delIngrediente(int indice) {
+        this.ingredientes.remove(indice);
+    }
+
+    public void setPreparo(String nome) {
+        this.preparo.add(nome);
+    }
+
+    public void delPreparo(int indice) {
+        this.preparo.remove(indice);
     }
 
     @Override
@@ -93,4 +101,5 @@ public class Receita {
     public int hashCode() {
         return nome != null ? nome.hashCode() : 0;
     }
+
 }

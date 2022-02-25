@@ -13,7 +13,7 @@ public class Catalogo {
         if (receita == null) throw new IllegalArgumentException();
 
         receitas.add(receita);
-    }
+    }                  
 
     public void del(String nomeReceita) {
         Receita receita = getReceita(nomeReceita);

@@ -28,7 +28,7 @@ public class ReceitaView {
         out.printf("Tempo de preparo: %s minutos %n", receita.getTempoPreparo());
         if (receita.getRendimento() != null) {
             if (receita.getRendimento().getMinimo() != receita.getRendimento().getMaximo()) {
-                out.printf("Rendimento: de %s à %s %s%n", receita.getRendimento().getMinimo(), receita.getRendimento().getMaximo(), receita.getRendimento().getTipo().name());
+                out.printf("Rendimento: de %s a %s %s%n", receita.getRendimento().getMinimo(), receita.getRendimento().getMaximo(), receita.getRendimento().getTipo().name());
             } else {
                 out.printf("Rendimento: %s %s%n", receita.getRendimento().getMinimo(), receita.getRendimento().getTipo().name());
             }
